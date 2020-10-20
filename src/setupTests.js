@@ -1,5 +1,8 @@
-// jest-dom adds custom jest matchers for asserting on DOM nodes.
-// allows you to do things like:
-// expect(element).toHaveTextContent(/react/i)
-// learn more: https://github.com/testing-library/jest-dom
-import '@testing-library/jest-dom/extend-expect';
+// setupTests.js file to configure the enzmye adapter for our tests.
+// The disableLifecyleMethods portion is needed to allow us to modify props through different tests
+import requestAnimationFrame from './tempPolyfills';
+
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter(), disableLifecycleMethods: true })

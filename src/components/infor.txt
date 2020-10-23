@@ -1,0 +1,11 @@
+Asynchronous code does not block the application from running. It runs in the background and allows other features/aspects of the application to occur.
+
+Asynchronous actions in redux return more than plain objects. They can return functions and promises.
+
+Middleware adds a layer between the redux store and code like an asynchronous fetch request to an API.
+
+Redux Thunk is a piece of middleware that allows for actions to return JavaScript promises.
+
+Fetch-Mock mocks the native fetch() method of JavaScript in the testing environment by stubbing http endpoints.
+
+The redux combineReducers() combines more than one reducer into one overall reducer for an application.
